@@ -1,0 +1,65 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow p-4">
+
+        <h3 class="text-center mb-3">Cuenta Nueva</h3>
+        <p class="text-center text-muted mb-4">Regístrate para iniciar sesión</p>
+
+       <form [formGroup]="registroForm" (ngSubmit)="registrar()">
+
+    <div class="mb-3">
+        <label class="form-label d-flex align-items-center gap-2">
+            <img src="https://i.ibb.co/dwnVSxQM/usuario.png" style="width: 20px;"> Nombre
+        </label>
+        <input type="text" class="form-control" formControlName="nombre" placeholder="Tu nombre completo">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label d-flex align-items-center gap-2">
+            <img src="https://i.ibb.co/WNJFLYQK/correo-electronico.png" style="width: 20px;"> Correo 
+        </label>
+        <input type="email" class="form-control" formControlName="correo" placeholder="usuario@correo.com">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label d-flex align-items-center gap-2">
+            <img src="https://i.ibb.co/BHfRVbQB/llave-de-casa-1.png" style="width: 20px;"> Contraseña
+        </label>
+
+        <div class="password-wrapper">
+            <input class="form-control"
+                formControlName="contraseña"
+                [type]="showPassword1 ? 'text' : 'password'"
+                placeholder="Contraseña">
+            <img class="toggle-eye"
+                [src]="showPassword1 ? 'https://i.ibb.co/CKZQchpf/ojo-1.png'
+                                    : 'https://i.ibb.co/tpDMjTVZ/ojo.png'"
+                (click)="togglePassword1()">
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label d-flex align-items-center gap-2">
+            <img src="https://i.ibb.co/BHfRVbQB/llave-de-casa-1.png" style="width: 20px;"> Confirmar contraseña
+        </label>
+
+        <div class="password-wrapper">
+            <input class="form-control"
+                formControlName="confirmar"
+                [type]="showPassword2 ? 'text' : 'password'"
+                placeholder="Confirmar contraseña">
+            <img class="toggle-eye"
+                [src]="showPassword2 ? 'https://i.ibb.co/CKZQchpf/ojo-1.png'
+                                    : 'https://i.ibb.co/tpDMjTVZ/ojo.png'"
+                (click)="togglePassword2()">
+        </div>
+    </div>
+
+    <button class="btn btn-primary w-100 mt-2" type="submit">Registrarse</button>
+
+</form>
+            <div class="text-center mt-3">
+            ¿Ya tienes cuenta?
+            <a routerLink="" class="text-primary fw-semibold">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>

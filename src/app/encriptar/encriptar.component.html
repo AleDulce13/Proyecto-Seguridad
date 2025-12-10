@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container mt-5">
+  <div class="card shadow-lg p-4">
+    <h2 class="text-center mb-4"> Encriptar Texto con AES</h2>
+
+    <div *ngIf="error" class="alert alert-danger">
+      {{ error }}
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label fw-bold">Texto:</label>
+      <textarea
+        class="form-control"
+        rows="4"
+        [(ngModel)]="texto"
+        placeholder="Escribe el texto que quieres encriptar..."
+      ></textarea>
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-success btn-lg" (click)="encriptar()">
+        Encriptar
+      </button>
+    </div>
+
+    <div *ngIf="resultado" class="mt-4">
+      <label class="form-label fw-bold">Resultado (criptograma):</label>
+      <textarea class="form-control" rows="4" readonly>{{ resultado }}</textarea>
+    </div>
+  </div>
+</div>
+

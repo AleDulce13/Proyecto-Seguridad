@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-md-4">
+
+      <div class="card shadow p-4">
+        <div class="card-body" >
+            
+            <div class="text-center">
+                <img src="https://i.ibb.co/Qvdw7w8h/proteger.png"
+                    alt="proteger"
+                    style="width: 120px; margin-bottom: 15px;">
+            </div>
+            
+        <h3 class="text-center mb-4">Iniciar Sesión</h3>
+
+            <form>
+
+            <div class="mb-3">
+                <label class="form-label d-flex align-items-center gap-2">
+                    <img src="https://i.ibb.co/WNJFLYQK/correo-electronico.png"
+                        alt="correo icono" 
+                        style="width: 20px; height: 20px;">Correo</label>
+                <input type="email" class="form-control" placeholder="usuario@correo.com">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label d-flex align-items-center gap-2">
+                    <img src="https://i.ibb.co/BHfRVbQB/llave-de-casa-1.png"
+                        alt="contraseña icono" 
+                        style="width: 20px; height: 20px;">Contraseña</label>
+
+                <div class="password-wrapper">
+                    <input class="form-control" [type]="showPassword ? 'text' : 'password'" placeholder="Contraseña">
+
+                    <img class="toggle-eye" [src]="showPassword 
+                        ? 'https://i.ibb.co/CKZQchpf/ojo-1.png': 'https://i.ibb.co/tpDMjTVZ/ojo.png'"
+                        (click)="togglePassword()">
+                </div>
+            </div>
+
+                <button class="btn btn-primary w-100" (click)="ingresar()" type="submit">Ingresar</button>
+
+                <div class="text-center mt-3"> ¿No tienes cuenta?
+                <a routerLink="/registro" class="text-primary fw-semibold">Registrate</a>
+                
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>

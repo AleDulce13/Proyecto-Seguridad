@@ -1,0 +1,17 @@
+nav {
+  height: 65px;
+}
+
+a {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.titulo-grande {
+  font-size: 25px; 
+}
+
+.super-bold {
+  font-weight: 600;
+}
+
